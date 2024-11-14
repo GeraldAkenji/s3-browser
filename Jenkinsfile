@@ -6,7 +6,7 @@ pipeline {
     stages {
         // stage('Git Checkout') {
         //     steps {
-        //         checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/stwins60/s3-browser.git']]])
+        //         checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/GeraldAkenji/s3-browser.git']]])
         //     }
         // }
         stage('Docker Build') {
