@@ -1,0 +1,4 @@
+**/browser_session
+**/venv
+s3_browser.db
+.env
