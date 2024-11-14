@@ -2,6 +2,8 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDENTIALS = credentials('1ede0dfb-20f1-46cb-9599-1dd484d9b50e')
+        IMAGE_TAG = "v.0.0.0${env.BUILD_NUMBER}-stable"
+        IMGAE_NAME = "geraldakenji/s3-browser:${IMAGE_TAG}"
     }
     stages {
         // stage('Git Checkout') {
@@ -12,7 +14,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    sh "docker build -t geraldakenji/s3-browser ."
+                    sh "docker build -t $IMAGE_NAME ."
                 }
             }
         }
